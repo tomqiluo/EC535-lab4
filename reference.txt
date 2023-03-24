@@ -1,0 +1,18 @@
+## Insert module
+mknod /dev/gpio_test c 61 0
+insmod /root/gpio_testing.ko
+
+mknod /dev/button_test c 61 0
+insmod /root/button_testing.ko
+
+
+# File Transfer
+## Copy file from PC to BeagleBone
+`rz`
+Ctrl-a
+Ctrl-s
+/home/tomqiluo/EC535/EC535-lab4/gpio_testing.ko
+/home/tomqiluo/EC535/EC535-lab4/button_testing.ko
+
+# Kernel Log
+dmesg
