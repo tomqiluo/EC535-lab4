@@ -1,5 +1,5 @@
 ifneq ($(KERNELRELEASE),)
-	obj-m := gpio_testing.o button_testing.o
+	obj-m := gpio_testing.o button_testing.o mytraffic.o
 else
 	KERNELDIR := $(EC535)/bbb/stock/stock-linux-4.19.82-ti-rt-r33
 	PWD := $(shell pwd)
