@@ -1,9 +1,15 @@
-## Insert module
+ls -d /dev/* | grep -i 'usb\|ama\|sac'
+picocom -b 115200 -s sz -v rz SERIAL_DEV
+
+# Insert module
 mknod /dev/gpio_test c 61 0
 insmod /root/gpio_testing.ko
 
 mknod /dev/button_test c 61 0
 insmod /root/button_testing.ko
+
+mknod /dev/mytraffic c 61 0
+insmod /root/mytraffic.ko
 
 
 # File Transfer
@@ -13,6 +19,7 @@ Ctrl-a
 Ctrl-s
 /home/tomqiluo/EC535/EC535-lab4/gpio_testing.ko
 /home/tomqiluo/EC535/EC535-lab4/button_testing.ko
+/home/tomqiluo/EC535/EC535-lab4/mytraffic.ko
 
 # Kernel Log
 dmesg
